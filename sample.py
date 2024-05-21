@@ -26,4 +26,6 @@ client.parameters.timeout = timedelta(milliseconds=1000)
 # 4. ソルバーの実行
 result = amplify.solve(model=f, client=client)
 
-print(result)
+# 5. 結果の表示
+print(f"{result.best.objective=}")
+print(f"{q} = {q.evaluate(result.best.values)}")
