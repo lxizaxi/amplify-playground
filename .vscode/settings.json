@@ -1,0 +1,14 @@
+{
+  // python file
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": false,
+    "editor.formatOnType": false,
+    "editor.formatOnSaveMode": "file",
+    "editor.defaultFormatter": "charliermarsh.ruff", // 別のものを指定するとフォーマットは指定したものになる
+    "editor.codeActionsOnSave": { // 保存時に実行する
+      "source.fixAll.ruff": true, // ruffのfixAllを明示的に使用。
+      "source.organizeImports.ruff": true //ruffのorganizeImportsを明示的に使用。
+    }
+  },
+}
