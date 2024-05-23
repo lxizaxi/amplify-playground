@@ -6,8 +6,8 @@ import amplify
 import dotenv
 import numpy as np
 from amplify import FixstarsClient, Poly, VariableGenerator
-
 from util.question_util import QuestionUtil
+from util.show_util import ShowUtil
 
 dotenv.load_dotenv(override=True)
 
@@ -44,4 +44,14 @@ result = amplify.solve(model=model, client=client)
 
 # 5. 結果の表示
 print(f"{result.best.objective=}")
-print(f"{q} = {q.evaluate(result.best.values)}")
+q_values = q.evaluate(result.best.values)
+print(f"{q} = {q_values}")
+
+# 図のplot
+ShowUtil.show_plot(locations)
+ShowUtil.show_route(
+    route=np.where(np.array(q_values) == 1)[1],
+    distances=distances,
+    locations=locations,
+    num_cities=NUM_CITIES,
+)

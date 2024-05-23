@@ -1,2 +1,3 @@
 amplify
 python-dotenv
+matplotlib
