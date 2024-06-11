@@ -20,14 +20,14 @@ class Jewel:
 
 
 jewels: list[Jewel] = [
-    Jewel(3, 6),
-    Jewel(4, 7),
-    Jewel(6, 8),
-    Jewel(1, 1),
-    Jewel(5, 4),
+    Jewel(95000, 470),
+    Jewel(60000, 300),
+    Jewel(25000, 130),
+    Jewel(12000, 70),
+    Jewel(1000, 30),
 ]
 
-capacity = 30
+capacity = 500
 
 # 1. 変数配列の作成
 gen = VariableGenerator()
